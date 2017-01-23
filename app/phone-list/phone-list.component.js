@@ -2,21 +2,27 @@
 angular.
 module('phoneList').
 component('phoneList', {
-    templateUrl: "phone-list/phone-list.template.html",
+    templateUrl: 'phone-list/phone-list.template.html',
     controller: function PhoneListController() {
-        //想法,这是一个json，可以从restful-api取得数据：this.phones = $http.get(api-url)
-        this.query = document.getElementById('search_input').innerHTML;
+        this.orderProp = 'age';
         this.phones = [
             {
                 name: 'Nexus S',
-                snippet: 'Fast just got faster with Nexus S.'
+                snippet: 'Fast just got faster with Nexus S.',
+                age: 1
             }, {
                 name: 'Motorola XOOM™ with Wi-Fi',
-                snippet: 'The Next, Next Generation tablet.'
+                snippet: 'The Next, Next Generation tablet.',
+                age: 2
             }, {
                 name: 'MOTOROLA XOOM™',
-                snippet: 'The Next, Next Generation tablet.'
+                snippet: 'The Next, Next Generation tablet.',
+                age: 3
             }
         ];
+
+
     }
 });
+
+
